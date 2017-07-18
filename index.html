@@ -12,9 +12,45 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="main.css">
-    <script src="core.js"></script>
-</head>
-<body>
+    <script src="core.js"></script><link href="css/main.css" rel="stylesheet">
+     <link href="css/main.css" rel="stylesheet">
+  </head>
+  <body onload="quellueva();">
+
+    
+     <img id="background" alt="background" src="" />
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/rainyday.js"></script>
+	<script>
+		function quellueva() {
+			var image = document.getElementById('background');
+			image.onload = function() {
+				var engine = new RainyDay({
+					image: this,
+					blur: 10,
+					opacity: 1,
+					gravityAngle: Math.PI / 2,
+					gravityAngleVariance: 0
+				});
+				
+				engine.gravity = engine.GRAVITY_NON_LINEAR;
+				engine.trail = engine.TRAIL_SMUDGE; //engine.trail = engine.TRAIL_DROPS
+				
+				engine.rain([ 
+					[0, 3, 8], 
+					[3, 8, 1]
+				], 50);
+			};
+			image.crossOrigin = 'anonymous';
+			image.src = 'images/bg.jpg';
+			
+		}
+</script>
+
     <h1>Login con facebook</h1>
 
     <a href="#" id="login" class="btn btn-primary" >Iniciar Sesion</a>

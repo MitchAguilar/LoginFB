@@ -24,7 +24,7 @@ $(function() {
 	  	});
 
 
-	  	FB.getLoginStatus(function(response) {
+	  	FB.getLoginStatus(function(response) {//obtiene el status
 	    	statusChangeCallback(response, function() {});
 	  	});
   	};
