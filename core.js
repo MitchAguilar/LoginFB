@@ -13,7 +13,7 @@ $(function() {
 					  "<a href='#' id='logout' class='btn btn-danger'>Cerrar sesión</a>"+
 					  "</div>";
 
-	window.fbAsyncInit = function() {
+	window.fbAsyncInit = function() {//inicializar el sdk de facebook
 
 	  	FB.init({
 	    	appId      : app_id,
