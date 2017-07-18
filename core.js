@@ -6,8 +6,10 @@ $(function() {
 	var btn_login = '<a href="#" id="login" class="btn btn-primary">Iniciar sesión</a>';
 
 	var div_session = "<div id='facebook-session'>"+
-					  "<strong></strong>"+
-					  "<img>"+
+                      "<strong></strong>"+
+                      "<br/><br/><br/>"+
+                      "<img>"+
+                        "<br/><br/><br/>"+
 					  "<a href='#' id='logout' class='btn btn-danger'>Cerrar sesión</a>"+
 					  "</div>";
 
