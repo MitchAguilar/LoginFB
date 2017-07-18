@@ -47,8 +47,8 @@ $(function() {
   		FB.api('/me', function(response) {
 	  		$('#login').after(div_session);
 	  		$('#login').remove();
-	  		$('#facebook-session strong').text("Bienvenido: "+response.name+"<br/><br/><br/><br/>");
-	  		$('#facebook-session img').attr('src','http://graph.facebook.com/'+response.id+'/picture?type=large'+"<br/><br/><br/><br/>");
+	  		$('#facebook-session strong').text("Bienvenido: "+response.name);
+	  		$('#facebook-session img').attr('src','http://graph.facebook.com/'+response.id+'/picture?type=large');
 	  	});
   	}
 
