@@ -1,7 +1,7 @@
 $(function() {
 
 	var app_id = '350511762049387';
-	var scopes = 'email, user_friends,user_about_me';
+	var scopes = 'email, user_friends';
 
 	var btn_login = '<a href="#" id="login" class="btn btn-primary">Iniciar sesión</a>';
 
@@ -33,7 +33,8 @@ $(function() {
   		console.log(response);
    		
     	if (response.status === 'connected') {
-      		getFacebookData();
+			  getFacebookData();
+			  datPer();
     	} else {
      		callback(false);
     	}
@@ -49,13 +50,28 @@ $(function() {
   		FB.api('/me', function(response) {
 	  		$('#login').after(div_session);
 	  		$('#login').remove();
-	  		$('#facebook-session strong').text("Bienvenido: "+response.name);
+	  		$('#facebook-session strong').text("Bienvenido: "+response.first_name+" ---- "+response.last_name);
 			$('#facebook-session img').attr('src','http://graph.facebook.com/'+response.id+'/picture?type=large');
 			console.log(response.id);
 			console.log(response.email);
 	  	});
   	}
+function datPer(){
 
+  FB.api(
+    '/me',
+    'GET',
+      {"fields":"email,first_name,last_name,id,gender"},
+      function(response) {
+        usrNombre = response.first_name;
+        usrApellidos = response.last_name;
+        usrCorreo = response.email;
+        usrID = response.id;
+        usrSexo = response.gender;
+    }
+  );
+
+}
   	var facebookLogin = function() {
   		checkLoginState(function(data) {
   			if (data.status !== 'connected') {
