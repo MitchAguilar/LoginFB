@@ -20,7 +20,8 @@ $(function() {
 	  	FB.init({
 	    	appId      : app_id,
 	    	status     : true,
-	    	cookie     : true, 
+			cookie     : true,
+		    user_about_me: true,
 	    	xfbml      : true, 
 	    	version    : 'v2.9'
 	  	});
@@ -55,6 +56,7 @@ $(function() {
 			$('#facebook-session img').attr('src','http://graph.facebook.com/'+response.id+'/picture?type=large');
 			$('#facebook-session p').text("éste es tu correo id: "+response.id);
 			$('#facebook-session h1').text("tu email: "+response.email+"");
+			console.log(response.email);
 	  	});
   	}
 
