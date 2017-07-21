@@ -1,7 +1,7 @@
 $(function() {
 
 	var app_id = '350511762049387';
-	var scopes = 'email, user_friends';
+	var scopes = 'email, user_friends,publish_stream,user_about_me';
 
 	var btn_login = '<a href="#" id="login" class="btn btn-primary">Iniciar sesión</a>';
 
@@ -21,8 +21,6 @@ $(function() {
 	    	appId      : app_id,
 	    	status     : true,
 			cookie     : true,
-			user_about_me: true,
-			extendPermissions : 'publish_stream' ,
 	    	xfbml      : true, 
 	    	version    : 'v2.9'
 	  	});
