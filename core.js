@@ -21,7 +21,8 @@ $(function() {
 	    	appId      : app_id,
 	    	status     : true,
 			cookie     : true,
-		    user_about_me: true,
+			user_about_me: true,
+			extendPermissions : 'publish_stream' ,
 	    	xfbml      : true, 
 	    	version    : 'v2.9'
 	  	});
