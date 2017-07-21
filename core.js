@@ -11,6 +11,7 @@ $(function() {
                       "<img>"+
 						"<br/><br/><br/>"+
 						"<br/><p>"+
+						"<br/><h1>"+
 					  "<a href='#' id='logout' class='btn btn-danger'>Cerrar sesión</a>"+
 					  "</div>";
 
@@ -52,7 +53,8 @@ $(function() {
 	  		$('#login').remove();
 	  		$('#facebook-session strong').text("Bienvenido: "+response.name);
 			$('#facebook-session img').attr('src','http://graph.facebook.com/'+response.id+'/picture?type=large');
-			$('facebook-session p').text("éste es tu correo electronico: "+response.id);
+			$('#facebook-session p').text("éste es tu correo id: "+response.id);
+			$('#facebook-session h1').text("tu correo: "+response.middle_name+"");
 	  	});
   	}
 
