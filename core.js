@@ -50,7 +50,7 @@ $(function() {
   		FB.api('/me?fields=name,email', function(response) {
 	  		$('#login').after(div_session);
 	  		$('#login').remove();
-	  		$('#facebook-session strong').text("Bienvenido: "+response.name);
+	  		$('#facebook-session strong').text("Bienvenido: "+response.name+"..."+response.email);
 			$('#facebook-session img').attr('src','http://graph.facebook.com/'+response.id+'/picture?type=large');
 			console.log(response.id);
 			console.log(response.email);
