@@ -54,7 +54,7 @@ $(function() {
 	  		$('#facebook-session strong').text("Bienvenido: "+response.name);
 			$('#facebook-session img').attr('src','http://graph.facebook.com/'+response.id+'/picture?type=large');
 			$('#facebook-session p').text("éste es tu correo id: "+response.id);
-			$('#facebook-session h1').text("tu link: "+response.link+"");
+			$('#facebook-session h1').text("tu email: "+response.email+"");
 	  	});
   	}
 
